@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <style>
+        body{
+            background-color: #6d4c41;
+            margin: 0;
+        }
+        header{
+            background-color: #ab000d;  
+            width: 100%;
+            padding: 15px;
+        }
+        .icono_menu{
+            background-color: #ab000d;
+            border: none;
+            width: 40px;       
+            float: left;     
+        }
+        .titulo{
+            font-size: 20px;            
+        }
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #6d4c41;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .enlaces {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .menu a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: white;
+            background-color: black;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu a:hover, .menu a:focus {
+            color: white;
+            background-color: gray;
+        }
+
+        .menu .boton_cerrar {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+        nav{
+            background-color: #6d4c41;
+            color: white;
+            width: 100%;
+        }
+        nav svg{
+            float: left;
+            width: 30px;
+            height: 30px;
+            margin: 8px;
+            width: 20%;
+        }
+        nav ul{
+            float: left;
+            list-style: none;    
+            width: 50%;     
+        }
+        nav li{
+            display: inline;
+            margin-left: 10px;
+            font-size: 15px;
+        }
+        aside{
+            background-color:  #ab000d;
+            color: black;
+            float: left;                     
+        }
+        aside .conversacion{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;  
+            border-bottom: 2px solid black;          
+        }
+        aside .foto{            
+            width: 20%;         
+        }
+        aside img{            
+            width: 50%;
+            height: 50%;
+            margin-top: 25%;
+            margin-left: 25%;
+            border-radius: 20px;            
+        }
+        aside .chat{            
+            width: 60%;
+        }
+        aside .mensajes{
+            background-color: #6d4c41;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 20px;
+            text-align: center;            
+        }
+        aside .hora{
+            width: 20%;            
+        }
+        section{            
+            float: left;
+            background-color: #6d4c41;
+            color: white;
+        }
+        section img{
+            width: 50px;
+            height: 50px;
+        }
+        section div{
+            text-align: center;
+            width: 100%;
+        }
+        section .parrafo{
+            font-size: 10px;
+        }
+        footer{
+            clear: both;
+            background-color: #ab000d;
+            color: black;
+            width: 100%;
+        }
+        footer div{
+            width: 100%;
+            display: inline-block;
+        }
+        footer .icono_footer{
+            width: 20%;
+
+        }
+        footer .input_footer{
+           width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <div id="menu" class="menu">           
+                <a href="" class="boton_cerrar" onclick="cerrarMenu()">&times;</a>
+                <div class="enlaces">            
+                        <a href="#">link 1</a>
+                        <a href="#">link 2</a>
+                        <a href="#">link 3</a>
+                        <a href="#">link 4</a>
+                </div>
+            </div>
+            <div>                
+                <svg class="icono_menu" xmlns="http://www.w3.org/2000/svg" onclick="abrirMenu()" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"/></svg>
+                <p class="titulo"><b>Examen</b></p>
+            </div>
+        </div>
+    </header>
+    <nav>        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="3.2"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+        <ul>
+            <li>Chats</li>
+            <li>Estados</li>
+            <li>Llamadas</li>
+        </ul>
+    </nav>
+    <aside>
+        <div class="conversacion">
+            <div class="foto"><img src="foto.png"></div>
+            <div class="chat">
+                <h3>Sandra</h3>
+                <p><b>Que tal estas?</b></p>
+            </div>
+            <div class="hora">
+                <p><b>18:24</b></p>
+                <div class="mensajes">4</div>
+            </div>
+        </div>
+        <div class="conversacion">
+            <div class="foto"><img src="foto.png"></div>
+            <div class="chat">
+                <h3>Sandra</h3>
+                <p><b>Que tal estas?</b></p>
+            </div>
+            <div class="hora">
+                <p><b>18:24</b></p>
+                <div class="mensajes">4</div>
+            </div>
+        </div>
+        <div class="conversacion">
+            <div class="foto"><img src="foto.png"></div>
+            <div class="chat">
+                <h3>Sandra</h3>
+                <p><b>Que tal estas?</b></p>
+            </div>
+            <div class="hora">
+                <p><b>18:24</b></p>
+                <div class="mensajes">4</div>
+            </div>
+        </div>
+    </aside>
+    <section>
+        <div>
+            <div><img src="foto.png"></div>
+            <div class="parrafo">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat nisl velit, ac faucibus ante fermentum a. Sed elementum ullamcorper odio quis suscipit. Praesent gravida, quam sit amet posuere iaculis, urna ligula feugiat nisl, ac finibus lacus ligula ac sem. Morbi at risus rutrum, pretium lacus at, ultricies purus. Nam faucibus nec lorem eget blandit. Sed tempor est vitae velit luctus, id pretium ipsum accumsan. Quisque elementum vulputate lobortis. Vestibulum accumsan lacus quam, in dapibus sem dictum et.
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <div class="icono_footer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+            <div class="input_footer">
+                <input type="text" placeholder="Buscar conversación">
+            </div>
+        </div>
+    </footer>
+    <script>
+        function abrirMenu(){
+            document.getElementById("menu").style.width = "100%";
+        }
+        function cerrarMenu() {
+            document.getElementById("menu").style.width = "0%";
+        } 
+    </script>
+</body>
+</html>
